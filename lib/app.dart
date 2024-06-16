@@ -27,7 +27,8 @@ ThemeData lightTheameData(){
           ),
           border: OutlineInputBorder(
               borderSide: BorderSide.none
-          )
+          ),
+
       ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
@@ -46,6 +47,15 @@ ThemeData lightTheameData(){
         fontSize: 28,
         fontWeight: FontWeight.bold,
         color: Colors.black
+      )
+    ),
+    textButtonTheme: TextButtonThemeData(
+      style: TextButton.styleFrom(
+        foregroundColor: Colors.grey,
+        textStyle: TextStyle(
+          fontWeight: FontWeight.w500,
+          fontSize: 18
+        )
       )
     )
 

@@ -1,5 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:taskmanger/ui/sceen/sing_up_sceen.dart';
 import 'package:taskmanger/ui/utility/aap_colors.dart';
 import 'package:taskmanger/ui/weidgets/background_widgets.dart';
 
@@ -21,15 +22,16 @@ class _SinginSceenState extends State<SinginSceen> {
           child:  SafeArea(
             child: SingleChildScrollView(
               child: Padding(
-                padding: EdgeInsets.all(16),
+                padding: EdgeInsets.all(24),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const SizedBox(height: 80,),
+                    const SizedBox(height: 100,),
                     Text("Get Started With",style: Theme.of(context).textTheme.titleLarge,),
                     SizedBox(height: 18,),
                     TextFormField(
                       controller: _emailTEcontroller,
+                      keyboardType: TextInputType.emailAddress,
                       decoration: InputDecoration(
                           hintText: 'email',
                         label: Text('email'),
@@ -69,9 +71,7 @@ class _SinginSceenState extends State<SinginSceen> {
                                 style: TextStyle(
                                   color: AppColors.green
                                 ),
-                                recognizer: TapGestureRecognizer()..onTap =(){
-                                  print('imon');
-                                }
+                                recognizer: TapGestureRecognizer()..onTap = _onTapSingUp
 
                               )
                             ]
@@ -89,6 +89,10 @@ class _SinginSceenState extends State<SinginSceen> {
             ),
           )),
     ) ;
+  }
+  void _onTapSingUp (){
+    Navigator.push(context, MaterialPageRoute(builder: (context)=>SingUpSceen()));
+
   }
   @override
   void dispose() {

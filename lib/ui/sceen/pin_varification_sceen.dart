@@ -1,6 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
+import 'package:taskmanger/ui/sceen/reset_password_sceen.dart';
 import 'package:taskmanger/ui/sceen/sing_in_sceen.dart';
 
 import '../utility/aap_colors.dart';
@@ -59,7 +60,7 @@ class _PinVarificationSceenState extends State<PinVarificationSceen> {
 
 
                     SizedBox(height: 18,),
-                    ElevatedButton(onPressed: (){},
+                    ElevatedButton(onPressed: _onTapOtpVarify,
                         child:Text("Varify")),
                     SizedBox(height: 36),
                     Center(
@@ -101,6 +102,10 @@ class _PinVarificationSceenState extends State<PinVarificationSceen> {
     super.dispose();
    _pinTEcontroller.dispose();
   }
+  void _onTapOtpVarify (){
+    Navigator.push(context, MaterialPageRoute(builder: (context)=>ResetPasswordSceen()));
+  }
+
 }
 
 // void _onTapSingIn (){

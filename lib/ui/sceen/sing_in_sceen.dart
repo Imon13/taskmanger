@@ -1,5 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:taskmanger/ui/sceen/email_varification_sceen.dart';
 import 'package:taskmanger/ui/sceen/sing_up_sceen.dart';
 import 'package:taskmanger/ui/utility/aap_colors.dart';
 import 'package:taskmanger/ui/weidgets/background_widgets.dart';
@@ -54,7 +55,7 @@ class _SinginSceenState extends State<SinginSceen> {
                     Center(
                       child: Column(
                         children: [
-                          TextButton(onPressed: (){},
+                          TextButton(onPressed: _onTapEmailVarification,
                               child: Text("Forgot Password?"),
                           ),
                           SizedBox(height: 8,),
@@ -92,6 +93,10 @@ class _SinginSceenState extends State<SinginSceen> {
   }
   void _onTapSingUp (){
     Navigator.push(context, MaterialPageRoute(builder: (context)=>SingUpSceen()));
+
+  }
+  void _onTapEmailVarification (){
+    Navigator.push(context, MaterialPageRoute(builder: (context)=>EmailVarificationSceen()));
 
   }
   @override

@@ -47,8 +47,15 @@ ThemeData lightTheameData(){
         fontSize: 28,
         fontWeight: FontWeight.bold,
         color: Colors.black
-      )
+      ),
+        titleSmall: TextStyle(
+            fontSize: 14,
+            fontWeight: FontWeight.w300,
+            color: Colors.grey
+        )
+
     ),
+
     textButtonTheme: TextButtonThemeData(
       style: TextButton.styleFrom(
         foregroundColor: Colors.grey,

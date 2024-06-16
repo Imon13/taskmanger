@@ -1,20 +1,20 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:taskmanger/ui/sceen/pin_varification_sceen.dart';
+import 'package:pin_code_fields/pin_code_fields.dart';
 import 'package:taskmanger/ui/sceen/sing_in_sceen.dart';
 
 import '../utility/aap_colors.dart';
 import '../weidgets/background_widgets.dart';
 
-class EmailVarificationSceen extends StatefulWidget {
-  const EmailVarificationSceen({super.key});
+class PinVarificationSceen extends StatefulWidget {
+  const PinVarificationSceen({super.key});
 
   @override
-  State<EmailVarificationSceen> createState() => _EmailVarificationSceenState();
+  State<PinVarificationSceen> createState() => _PinVarificationSceenState();
 }
 
-class _EmailVarificationSceenState extends State<EmailVarificationSceen> {
-  TextEditingController _emailTEcontroller =TextEditingController();
+class _PinVarificationSceenState extends State<PinVarificationSceen> {
+  TextEditingController _pinTEcontroller =TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,25 +27,40 @@ class _EmailVarificationSceenState extends State<EmailVarificationSceen> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const SizedBox(height: 100,),
-                    Text("Your email address",style: Theme.of(context).textTheme.titleLarge,),
+                    Text("Pin Varification",style: Theme.of(context).textTheme.titleLarge,),
                     SizedBox(height: 8,),
                     Text("A six digits varification pin send in your email",style: Theme.of(context).textTheme.titleSmall),
                     SizedBox(height: 18,),
-                    TextFormField(
-                      controller: _emailTEcontroller,
-                      keyboardType: TextInputType.emailAddress,
-                      decoration: InputDecoration(
-                        hintText: 'email',
-                        label: Text('email'),
-                      ),
+                    PinCodeTextField(
+                      length: 6,
 
+                      animationType: AnimationType.fade,
+                      pinTheme: PinTheme(
+                        shape: PinCodeFieldShape.box,
+                        borderRadius: BorderRadius.circular(5),
+                        fieldHeight: 50,
+                        fieldWidth: 40,
+                        activeFillColor: Colors.white,
+                        selectedFillColor: Colors.white,
+                        inactiveFillColor: Colors.white,
+                        selectedColor: AppColors.green
+                      ),
+                      keyboardType: TextInputType.number,
+                      animationDuration: Duration(milliseconds: 300),
+                      backgroundColor: Colors.transparent,
+                      enableActiveFill: true,
+
+                      controller: _pinTEcontroller,
+
+
+                     appContext: context,
                     ),
 
-                    
-                   
+
+
                     SizedBox(height: 18,),
-                    ElevatedButton(onPressed: _onTapConform,
-                        child: Icon(Icons.arrow_right_alt_outlined)),
+                    ElevatedButton(onPressed: (){},
+                        child:Text("Varify")),
                     SizedBox(height: 36),
                     Center(
                       child: Column(
@@ -84,10 +99,7 @@ class _EmailVarificationSceenState extends State<EmailVarificationSceen> {
   }
   void dispose() {
     super.dispose();
-    _emailTEcontroller.dispose();
-  }
-  void _onTapConform(){
-    Navigator.push(context, MaterialPageRoute(builder: (context)=>PinVarificationSceen()));
+   _pinTEcontroller.dispose();
   }
 }
 

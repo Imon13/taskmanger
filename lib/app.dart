@@ -19,6 +19,12 @@ ThemeData lightTheameData(){
       inputDecorationTheme: InputDecorationTheme(
           fillColor: Colors.white,
           filled: true,
+          hintStyle: TextStyle(
+            color: Colors.grey.shade400
+          ),
+          labelStyle: TextStyle(
+              color: Colors.grey.shade400
+          ),
           border: OutlineInputBorder(
               borderSide: BorderSide.none
           )
@@ -33,6 +39,13 @@ ThemeData lightTheameData(){
           borderRadius: BorderRadius.circular(15)
         )
 
+      )
+    ),
+    textTheme: TextTheme(
+      titleLarge: TextStyle(
+        fontSize: 28,
+        fontWeight: FontWeight.bold,
+        color: Colors.black
       )
     )
 

@@ -1,6 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:taskmanger/ui/sceen/sing_in_sceen.dart';
+import 'package:taskmanger/ui/sceen/auths/sing_in_sceen.dart';
 import 'package:taskmanger/ui/utility/aap_colors.dart';
 import 'package:taskmanger/ui/weidgets/background_widgets.dart';
 

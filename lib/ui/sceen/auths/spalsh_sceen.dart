@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:taskmanger/ui/sceen/sing_in_sceen.dart';
+import 'package:taskmanger/ui/sceen/auths/sing_in_sceen.dart';
 import 'package:taskmanger/ui/utility/assets_paths.dart';
 import 'package:taskmanger/ui/weidgets/background_widgets.dart';
 

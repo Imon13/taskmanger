@@ -1,7 +1,8 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:taskmanger/ui/sceen/email_varification_sceen.dart';
-import 'package:taskmanger/ui/sceen/sing_up_sceen.dart';
+import 'package:taskmanger/ui/sceen/auths/email_varification_sceen.dart';
+import 'package:taskmanger/ui/sceen/auths/sing_up_sceen.dart';
+import 'package:taskmanger/ui/sceen/main_bottom_sceen.dart';
 import 'package:taskmanger/ui/utility/aap_colors.dart';
 import 'package:taskmanger/ui/weidgets/background_widgets.dart';
 
@@ -49,7 +50,7 @@ class _SinginSceenState extends State<SinginSceen> {
               
                     ),
                     SizedBox(height: 18,),
-                    ElevatedButton(onPressed: (){},
+                    ElevatedButton(onPressed: _onTapNextButton,
                         child: Icon(Icons.arrow_right_alt_outlined)),
                     SizedBox(height: 36),
                     Center(
@@ -97,6 +98,10 @@ class _SinginSceenState extends State<SinginSceen> {
   }
   void _onTapEmailVarification (){
     Navigator.push(context, MaterialPageRoute(builder: (context)=>EmailVarificationSceen()));
+
+  }
+  void _onTapNextButton (){
+   Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>MainBottomSceen()));
 
   }
   @override

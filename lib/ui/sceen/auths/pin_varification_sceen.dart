@@ -1,11 +1,11 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
-import 'package:taskmanger/ui/sceen/reset_password_sceen.dart';
-import 'package:taskmanger/ui/sceen/sing_in_sceen.dart';
+import 'package:taskmanger/ui/sceen/auths/reset_password_sceen.dart';
+import 'package:taskmanger/ui/sceen/auths/sing_in_sceen.dart';
 
-import '../utility/aap_colors.dart';
-import '../weidgets/background_widgets.dart';
+import '../../utility/aap_colors.dart';
+import '../../weidgets/background_widgets.dart';
 
 class PinVarificationSceen extends StatefulWidget {
   const PinVarificationSceen({super.key});

@@ -1,10 +1,10 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:taskmanger/ui/sceen/pin_varification_sceen.dart';
-import 'package:taskmanger/ui/sceen/sing_in_sceen.dart';
+import 'package:taskmanger/ui/sceen/auths/pin_varification_sceen.dart';
+import 'package:taskmanger/ui/sceen/auths/sing_in_sceen.dart';
 
-import '../utility/aap_colors.dart';
-import '../weidgets/background_widgets.dart';
+import '../../utility/aap_colors.dart';
+import '../../weidgets/background_widgets.dart';
 
 class EmailVarificationSceen extends StatefulWidget {
   const EmailVarificationSceen({super.key});

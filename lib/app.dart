@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:taskmanger/ui/sceen/spalsh_sceen.dart';
+import 'package:taskmanger/ui/sceen/auths/spalsh_sceen.dart';
 import 'package:taskmanger/ui/utility/aap_colors.dart';
 
 class TaskManegerApp extends StatelessWidget {
@@ -8,6 +8,7 @@ class TaskManegerApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: SpalshSceen(),
       theme:lightTheameData()
 
@@ -16,6 +17,7 @@ class TaskManegerApp extends StatelessWidget {
 }
 ThemeData lightTheameData(){
   return ThemeData(
+
       inputDecorationTheme: InputDecorationTheme(
           fillColor: Colors.white,
           filled: true,

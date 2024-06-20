@@ -45,7 +45,7 @@ class _MainBottomSceenState extends State<MainBottomSceen> {
             BottomNavigationBarItem(icon: Icon(Icons.abc),label: 'Cencel Task'),
 
       ]),
-        appBar: profileAppber(),
+         appBar: profileAppber(context),
       body: _sceens[_selectedIndex]
       
 

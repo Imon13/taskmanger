@@ -19,6 +19,7 @@ class _NewTaskSceenState extends State<NewTaskSceen> {
     return Scaffold(
 
 
+
       body: Padding(
         padding: const EdgeInsets.only(top: 8,right: 8, left: 8),
         child: Column(

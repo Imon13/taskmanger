@@ -17,7 +17,7 @@ class _AddNewTaskSceenState extends State<AddNewTaskSceen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar:  profileAppber(),
+
       body: BackgroundWidgets(
         child: SingleChildScrollView(
           child: Padding(

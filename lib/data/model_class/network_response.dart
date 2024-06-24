@@ -9,5 +9,5 @@ class NetworkResponse{
     required this.statusCode,
     required this.isSuccess,
      this.responseData,
-     this.errorMassage='something went wong'});
+     this.errorMassage='something went wong', });
 }

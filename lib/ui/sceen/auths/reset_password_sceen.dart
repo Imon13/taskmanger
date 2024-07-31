@@ -87,7 +87,7 @@ class _ResetPasswordSceenState extends State<ResetPasswordSceen> {
                                         Navigator.push(context,
                                             MaterialPageRoute(
                                                 builder: (context) =>
-                                                    SinginSceen()));
+                                                    SignInScreen()));
                                       }
 
                                 )
@@ -112,7 +112,7 @@ class _ResetPasswordSceenState extends State<ResetPasswordSceen> {
     _confirmPasswordlTEcontroller.dispose();
   }
   void _onTapConfirmButoon (){
-    Navigator.push(context, MaterialPageRoute(builder: (context)=>SinginSceen()));
+    Navigator.push(context, MaterialPageRoute(builder: (context)=>SignInScreen()));
   }
 }
 

@@ -80,7 +80,7 @@ class _PinVarificationSceenState extends State<PinVarificationSceen> {
                                         color: AppColors.green
                                     ),
                                     recognizer: TapGestureRecognizer()..onTap =(){
-                                      Navigator.push(context, MaterialPageRoute(builder: (context)=>SinginSceen()));
+                                      Navigator.push(context, MaterialPageRoute(builder: (context)=>SignInScreen()));
                                     }
 
                                 )

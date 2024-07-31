@@ -20,7 +20,7 @@ class _SpalshSceenState extends State<SpalshSceen> {
   Future<void> _moveToNextSceen () async{
     await Future.delayed(const Duration(seconds: 3));
     if(mounted){
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>SinginSceen()));
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>SignInScreen()));
     }
   }
   @override

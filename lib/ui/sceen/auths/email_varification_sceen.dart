@@ -64,7 +64,7 @@ class _EmailVarificationSceenState extends State<EmailVarificationSceen> {
                                         color: AppColors.green
                                     ),
                                     recognizer: TapGestureRecognizer()..onTap =(){
-                                      Navigator.push(context, MaterialPageRoute(builder: (context)=>SinginSceen()));
+                                      Navigator.push(context, MaterialPageRoute(builder: (context)=>SignInScreen()));
                                     }
 
                                 )
